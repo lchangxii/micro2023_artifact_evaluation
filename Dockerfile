@@ -18,6 +18,10 @@ From ubuntu:20.04
     RUN tar -xvzf go1.20.1.linux-amd64.tar.gz
     ENV PATH="/root/artifact_evaluation/go/bin:$PATH"
     ENV HOME /root
+    RUN git clone https://github.com/lchangxii/micro2023_figures.git
+    RUN pip install pandas
+    RUN pip install matplotlib
+    RUN pip install openpyxl
 #%environment
 #export PATH=/opt/riscv/:$PATH
 
